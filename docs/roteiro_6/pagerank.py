@@ -9,7 +9,7 @@ from scipy import stats
 # 1. Leitura do dataset local
 # ----------------------------------------------------------
 
-EDGE_FILE = "soc-Epinions1.txt"
+EDGE_FILE = "https://raw.githubusercontent.com/guikingoak/MachineLearning/main/docs/PageRank/soc-Epinions1.txt"
 
 df = pd.read_csv(
     EDGE_FILE,
