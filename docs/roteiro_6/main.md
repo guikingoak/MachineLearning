@@ -104,7 +104,9 @@ Para avaliar similaridade quantitativa, foram calculadas as correlações entre 
 
 Os dois indicadores apontam equivalência entre os métodos: a estrutura de ordenação e a escala dos valores foram preservadas.
 
-O gráfico de dispersão gerado (`pagerank_comparison.png`) mostra os pontos concentrados ao longo da diagonal, indicando alinhamento direto entre as duas soluções.
+O gráfico de dispersão gerado mostra os pontos concentrados ao longo da diagonal, indicando alinhamento direto entre as duas soluções.
+
+![Gráfico de comparação do PageRank](pagerank_comparison.png)
 
 ---
 

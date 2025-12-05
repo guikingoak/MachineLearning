@@ -17,4 +17,3 @@ Esta página documenta as entregas de exercícios da disciplina de **Machine Lea
 - [x] Random Forest
 - [x] Page Rank
 - [x] Support Vector Machine
-
