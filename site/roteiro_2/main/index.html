@@ -10,26 +10,28 @@
         <meta name="author" content="Guilherme Reis">
       
       
-        <link rel="canonical" href="https://guikingoak.github.io/MachineLearning/">
+        <link rel="canonical" href="https://guikingoak.github.io/MachineLearning/roteiro_2/main/">
       
       
+        <link rel="prev" href="../../roteiro_1/main/">
       
-        <link rel="next" href="roteiro_1/main/">
+      
+        <link rel="next" href="../../roteiro_6/main/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
-        <title>Entregas de Machine Learning</title>
+        <title>2. KNN - Entregas de Machine Learning</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -113,7 +115,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -139,7 +141,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#entregas-individuais-ciencia-de-dados-guilherme-reis" class="md-skip">
+        <a href="#relatorio-knn" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -155,7 +157,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="." title="Entregas de Machine Learning" class="md-header__button md-logo" aria-label="Entregas de Machine Learning" data-md-component="logo">
+    <a href="../.." title="Entregas de Machine Learning" class="md-header__button md-logo" aria-label="Entregas de Machine Learning" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -175,7 +177,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              2. KNN
             
           </span>
         </div>
@@ -291,7 +293,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Entregas de Machine Learning" class="md-nav__button md-logo" aria-label="Entregas de Machine Learning" data-md-component="logo">
+    <a href="../.." title="Entregas de Machine Learning" class="md-nav__button md-logo" aria-label="Entregas de Machine Learning" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -318,6 +320,91 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Exercícios
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Exercícios
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roteiro_1/main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Árvore de Decisão
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -335,7 +422,7 @@
   
   
   <span class="md-ellipsis">
-    Home
+    2. KNN
     
   </span>
   
@@ -343,12 +430,12 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="." class="md-nav__link md-nav__link--active">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Home
+    2. KNN
     
   </span>
   
@@ -371,18 +458,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#home" class="md-nav__link">
+  <a href="#introducao" class="md-nav__link">
     <span class="md-ellipsis">
-      Home
+      Introdução
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#entregas-realizadas" class="md-nav__link">
+  <a href="#1-exploracao-dos-dados" class="md-nav__link">
     <span class="md-ellipsis">
-      Entregas Realizadas
+      1. Exploração dos Dados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-pre-processamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Pré-processamento
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-divisao-dos-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Divisão dos Dados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-treinamento-do-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Treinamento do Modelo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-avaliacao-do-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Avaliação do Modelo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Conclusão
     </span>
   </a>
   
@@ -395,68 +527,6 @@
     </li>
   
 
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Exercícios
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Exercícios
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="roteiro_1/main/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    1. Árvore de Decisão
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -466,30 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="roteiro_2/main/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    2. KNN
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="roteiro_3/main.md" class="md-nav__link">
+      <a href="../../roteiro_3/main.md" class="md-nav__link">
         
   
   
@@ -512,7 +559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="roteiro_4/main.md" class="md-nav__link">
+      <a href="../../roteiro_4/main.md" class="md-nav__link">
         
   
   
@@ -535,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="roteiro_5/main.md" class="md-nav__link">
+      <a href="../../roteiro_5/main.md" class="md-nav__link">
         
   
   
@@ -558,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="roteiro_6/main/" class="md-nav__link">
+      <a href="../../roteiro_6/main/" class="md-nav__link">
         
   
   
@@ -581,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="roteiro_7/main/" class="md-nav__link">
+      <a href="../../roteiro_7/main/" class="md-nav__link">
         
   
   
@@ -631,18 +678,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#home" class="md-nav__link">
+  <a href="#introducao" class="md-nav__link">
     <span class="md-ellipsis">
-      Home
+      Introdução
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#entregas-realizadas" class="md-nav__link">
+  <a href="#1-exploracao-dos-dados" class="md-nav__link">
     <span class="md-ellipsis">
-      Entregas Realizadas
+      1. Exploração dos Dados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-pre-processamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Pré-processamento
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-divisao-dos-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Divisão dos Dados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-treinamento-do-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Treinamento do Modelo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-avaliacao-do-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Avaliação do Modelo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Conclusão
     </span>
   </a>
   
@@ -667,19 +759,25 @@
   
 
 
-<h1 id="entregas-individuais-ciencia-de-dados-guilherme-reis">Entregas Individuais - Ciência de Dados - Guilherme Reis<a class="headerlink" href="#entregas-individuais-ciencia-de-dados-guilherme-reis" title="Permanent link">&para;</a></h1>
-<h2 id="home">Home<a class="headerlink" href="#home" title="Permanent link">&para;</a></h2>
-<p>Esta página documenta as entregas de exercícios da disciplina de <strong>Machine Learning</strong>.  </p>
-<h2 id="entregas-realizadas">Entregas Realizadas<a class="headerlink" href="#entregas-realizadas" title="Permanent link">&para;</a></h2>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Árvore de Decisão</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> KNN</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> K-Means</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Métricas de Avaliação</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Random Forest</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Page Rank</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Support Vector Machine</li>
-</ul>
+<h1 id="relatorio-knn">Relatório – KNN<a class="headerlink" href="#relatorio-knn" title="Permanent link">&para;</a></h1>
+<h2 id="introducao">Introdução<a class="headerlink" href="#introducao" title="Permanent link">&para;</a></h2>
+<p>Este projeto tem como objetivo aplicar o algoritmo K-Nearest Neighbors (KNN) para resolver um problema de classificação com o dataset Titanic. O Projeto consiste em prever se um passageiro sobreviveu ao naufrágio com base em atributos demográficos e socioeconômicos.</p>
+<h2 id="1-exploracao-dos-dados">1. Exploração dos Dados<a class="headerlink" href="#1-exploracao-dos-dados" title="Permanent link">&para;</a></h2>
+<p>O dataset Titanic contém features que utilizaremos como o Pclass, Sex, Age, SibSp, Parch, Fare e Embarked. A variável alvo é Survived sendo 0 = não sobreviveu e 1 = sobreviveu. A análise exploratória identificou padrões importantes, como maior sobrevivência entre mulheres e passageiros da 1ª classe. Estatísticas descritivas e visualizações realizadas ao subir carregar o dataset ajudaram a compreender melhor a distribuição dos atributos e a relação deles com a variável alvo.</p>
+<h2 id="2-pre-processamento">2. Pré-processamento<a class="headerlink" href="#2-pre-processamento" title="Permanent link">&para;</a></h2>
+<p>O pré-processamento envolveu:
+- Tratamento de valores ausentes onde para a variável Age utilizamos a mediana e para a variável Embarked utilizamos a moda.
+- Conversão de Sex para valores numéricos.
+- One-Hot Encoding aplicado em Embarked.
+- Normalização com StandardScaler devido ao uso de distâncias.</p>
+<h2 id="3-divisao-dos-dados">3. Divisão dos Dados<a class="headerlink" href="#3-divisao-dos-dados" title="Permanent link">&para;</a></h2>
+<p>O dataset foi dividido em 80% para treino e 20% para teste. A estratégia stratify=y foi utilizada para manter a proporção de classes entre as amostras.</p>
+<h2 id="4-treinamento-do-modelo">4. Treinamento do Modelo<a class="headerlink" href="#4-treinamento-do-modelo" title="Permanent link">&para;</a></h2>
+<p>O modelo KNN foi treinado inicialmente com k = 5. Valores adicionais entre 1 e 20 de k foram testados para observar variações no desempenho.</p>
+<h2 id="5-avaliacao-do-modelo">5. Avaliação do Modelo<a class="headerlink" href="#5-avaliacao-do-modelo" title="Permanent link">&para;</a></h2>
+<p>Foram utilizadas acurácia, matriz de confusão, precision, recall e F1-score. O modelo apresentou desempenho consistente, com acurácia média próxima de 80%. Valores muito baixos de k resultaram em maior sensibilidade a ruídos, enquanto valores muito altos prejudicaram a identificação de padrões locais.</p>
+<h2 id="6-conclusao">6. Conclusão<a class="headerlink" href="#6-conclusao" title="Permanent link">&para;</a></h2>
+<p>O projeto foi bem simples e demonstrou que o KNN é capaz de realizar previsões razoáveis no dataset Titanic, desde que o pré-processamento seja bem executado. A normalização desempenhou um papel crucial durante este projeto. Como melhorias, destacam-se o uso de técnicas de balanceamento e testes com modelos mais avançados.</p>
 
 
 
@@ -736,10 +834,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "content.code.select", "content.code.annotate", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.top", "navigation.path", "navigation.tracking", "navigation.expand"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.top", "navigation.path", "navigation.tracking", "navigation.expand"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
