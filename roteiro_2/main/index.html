@@ -10,11 +10,13 @@
         <meta name="author" content="Guilherme Reis">
       
       
-        <link rel="canonical" href="https://guikingoak.github.io/MachineLearning/roteiro_6/main/">
+        <link rel="canonical" href="https://guikingoak.github.io/MachineLearning/roteiro_2/main/">
       
       
-        <link rel="prev" href="../../roteiro_2/main/">
+        <link rel="prev" href="../..">
       
+      
+        <link rel="next" href="../../roteiro_6/main/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +24,7 @@
     
     
       
-        <title>6. Page Rank - Entregas de Machine Learning</title>
+        <title>2. KNN - Entregas de Machine Learning</title>
       
     
     
@@ -139,7 +141,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#analise-do-algoritmo-pagerank-na-rede-soc-epinions1" class="md-skip">
+        <a href="#relatorio-classificacao-com-arvore-de-decisao" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -175,7 +177,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              6. Page Rank
+              2. KNN
             
           </span>
         </div>
@@ -403,10 +405,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../roteiro_2/main/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    2. KNN
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -417,6 +441,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-exploracao-dos-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Exploração dos Dados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-pre-processamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Pré-Processamento
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-divisao-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Divisão de Dados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Conclusão
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -495,32 +584,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    6. Page Rank
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../roteiro_6/main/" class="md-nav__link">
         
   
   
@@ -531,146 +598,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-descricao-geral" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Descrição geral
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-estrutura-dos-dados-e-construcao-do-grafo" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Estrutura dos dados e construção do grafo
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-implementacao-do-pagerank" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Implementação do PageRank
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Implementação do PageRank">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-formulacao-adotada" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1 Formulação adotada
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-estrategias-utilizadas" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2 Estratégias utilizadas
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-implementacao-de-referencia" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3 Implementação de referência
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-resultados-obtidos" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Resultados obtidos
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Resultados obtidos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-convergencia" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.1 Convergência
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-nos-com-maior-pagerank" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.2 Nós com maior PageRank
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-comparacao-entre-as-duas-implementacoes" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.3 Comparação entre as duas implementações
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-interpretacao-dos-resultados" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Interpretação dos resultados
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-conclusao" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Conclusão
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -733,120 +660,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-descricao-geral" class="md-nav__link">
+  <a href="#1-introducao" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Descrição geral
+      1. Introdução
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-estrutura-dos-dados-e-construcao-do-grafo" class="md-nav__link">
+  <a href="#2-exploracao-dos-dados" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Estrutura dos dados e construção do grafo
+      2. Exploração dos Dados
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-implementacao-do-pagerank" class="md-nav__link">
+  <a href="#3-pre-processamento" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Implementação do PageRank
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Implementação do PageRank">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-formulacao-adotada" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1 Formulação adotada
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-estrategias-utilizadas" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2 Estratégias utilizadas
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-implementacao-de-referencia" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3 Implementação de referência
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-resultados-obtidos" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Resultados obtidos
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Resultados obtidos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-convergencia" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.1 Convergência
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-nos-com-maior-pagerank" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.2 Nós com maior PageRank
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-comparacao-entre-as-duas-implementacoes" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.3 Comparação entre as duas implementações
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-interpretacao-dos-resultados" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Interpretação dos resultados
+      3. Pré-Processamento
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-conclusao" class="md-nav__link">
+  <a href="#4-divisao-de-dados" class="md-nav__link">
     <span class="md-ellipsis">
-      6. Conclusão
+      4. Divisão de Dados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Conclusão
     </span>
   </a>
   
@@ -871,148 +723,77 @@
   
 
 
-<h1 id="analise-do-algoritmo-pagerank-na-rede-soc-epinions1">Análise do Algoritmo PageRank na Rede soc-Epinions1<a class="headerlink" href="#analise-do-algoritmo-pagerank-na-rede-soc-epinions1" title="Permanent link">&para;</a></h1>
-<h2 id="1-descricao-geral">1. Descrição geral<a class="headerlink" href="#1-descricao-geral" title="Permanent link">&para;</a></h2>
-<p>O PageRank é um método de avaliação de importância em grafos dirigidos baseado na distribuição de probabilidade de uma caminhada aleatória. Cada nó recebe um valor proporcional à probabilidade de um agente estar posicionado na mesma posição após um grande número de passos. Esse valor reflete não apenas quantas conexões o nó recebe, mas também a relevância dos nós que apontam para ele.</p>
-<p>Em nosso estudo, o algoritmo foi aplicado à rede <strong>soc-Epinions1</strong>, composta por relações de confiança entre usuários em uma plataforma de avaliações. O PageRank se ajusta naturalmente a esse tipo de estrutura, capturando padrões globais de reputação.</p>
-<hr />
-<h2 id="2-estrutura-dos-dados-e-construcao-do-grafo">2. Estrutura dos dados e construção do grafo<a class="headerlink" href="#2-estrutura-dos-dados-e-construcao-do-grafo" title="Permanent link">&para;</a></h2>
-<p>O dataset contém pares de valores inteiros representando relações de confiança do tipo:</p>
-<p>[
-u \rightarrow v
-]</p>
-<p>em que <strong>u confia em v</strong>. Após a leitura do arquivo:</p>
+<h1 id="relatorio-classificacao-com-arvore-de-decisao">Relatório – Classificação com Árvore de Decisão<a class="headerlink" href="#relatorio-classificacao-com-arvore-de-decisao" title="Permanent link">&para;</a></h1>
+<h2 id="1-introducao">1. Introdução<a class="headerlink" href="#1-introducao" title="Permanent link">&para;</a></h2>
+<p>O objetivo deste projeto é utilizar o modelo de Árvore de Decisão para prever asobrevivência dos passageiros do Titanic, baseado em atributos demográficos e socioeconômicos que o próprio dataset disponibiliza.</p>
+<p>A idéia consiste em treinar um modelo supervisionado de classificação binária que consiga distinguir entre:</p>
+<p>Classe 0 - Não Sobreviveu</p>
+<p>Classe 1 - Sobreviveu</p>
+<h2 id="2-exploracao-dos-dados">2. Exploração dos Dados<a class="headerlink" href="#2-exploracao-dos-dados" title="Permanent link">&para;</a></h2>
+<p>Este dataset é composto pelas seguintes features:</p>
 <ul>
-<li>nós identificados: <strong>75.879</strong>  </li>
-<li>arestas dirigidas: <strong>508.837</strong></li>
+<li>Sex</li>
+<li>Age</li>
+<li>PClass (Classe Social)</li>
+<li>Fare</li>
+<li>Relação Familiar</li>
+<li>Local de Embarque</li>
 </ul>
-<p>A modelagem considerou apenas a sua estrutura original, sem transformações ou novas filtragens. O grafo foi construído como <strong>dirigido</strong>, preservando a direção e permitindo a avaliação de caminhos assimétricos de reputação.</p>
-<p>As características estruturais indicam uma rede grande e esparsa, com distribuição desigual de graus e presença de usuários com papel de hubs de confiança. Esses padrões influenciam diretamente o comportamento do PageRank.</p>
-<hr />
-<h2 id="3-implementacao-do-pagerank">3. Implementação do PageRank<a class="headerlink" href="#3-implementacao-do-pagerank" title="Permanent link">&para;</a></h2>
-<h3 id="31-formulacao-adotada">3.1 Formulação adotada<a class="headerlink" href="#31-formulacao-adotada" title="Permanent link">&para;</a></h3>
-<p>A implementação segue a forma iterativa padrão:</p>
-<p>[
-PR(i) = \frac{1-d}{N} + d \sum_{j \in \text{In}(i)} \frac{PR(j)}{\text{outdeg}(j)},
-]</p>
-<p>com:</p>
+<p>Durante uma análise inicial é possivel determinar que <strong>sexo</strong> é um fator determinante, mostrando que as mulheres tiveram uma taxa de sobreivência muito superior aos homens. Outro fator determinante nesta análise foi a Classe Social, é possível notar que passageiros da primeira classe sobreviveram bem mais em relação aos outros. Por último temos a variável de idade que apresenta uma distribuição variada, porém, constitui majoritariamente de Crianças e Pessoas entre 20 e 40 anos.</p>
+<p>É importante ressaltar que a nossa variável alvo possui uma clara discrepância, onde existem muito mais passageiros que não sobreviveram em relação aos sobreviventes.</p>
+<h2 id="3-pre-processamento">3. Pré-Processamento<a class="headerlink" href="#3-pre-processamento" title="Permanent link">&para;</a></h2>
+<p>Para o pré-processamento realizamos as seguintes etapas:</p>
 <ul>
-<li><strong>N</strong>: número total de nós,  </li>
-<li><strong>d = 0.85</strong>: fator de amortecimento,  </li>
-<li><strong>In(i)</strong>: conjunto de nós que apontam para i,  </li>
-<li><strong>outdeg(j)</strong>: grau de saída do nó j.</li>
+<li>Remoção de colunas que não nos auxiliam de maneira alguma.</li>
+<li>Tratamento de valores ausentes.</li>
+<li>Conversão das nossas variáveis categórias através do one-hot encoding.</li>
+<li>Utilização do StandarScaler em variáveis numéricas.</li>
+<li>Separação das Features e Target (X , y respectivamente).</li>
 </ul>
-<h3 id="32-estrategias-utilizadas">3.2 Estratégias utilizadas<a class="headerlink" href="#32-estrategias-utilizadas" title="Permanent link">&para;</a></h3>
+<h2 id="4-divisao-de-dados">4. Divisão de Dados<a class="headerlink" href="#4-divisao-de-dados" title="Permanent link">&para;</a></h2>
+<p>Os dados foram dividos em:</p>
 <ul>
-<li>Inicialização uniforme do vetor de PageRank.  </li>
-<li>Computação iterativa usando listas de adjacência, evitando a construção de matriz completa.  </li>
-<li>Redistribuição do PageRank acumulado em nós sem arestas de saída (dangling nodes).  </li>
-<li>Controle de convergência pela diferença entre vetores consecutivos.  </li>
-<li>Critério de parada: erro inferior a (10^{-6}) ou limite de 200 iterações.</li>
+<li>80% para treino.</li>
+<li>20% para teste.</li>
 </ul>
-<p>Essa abordagem é adequada para grafos grandes, reduz o consumo de memória e mantém o custo proporcional ao uso de nós e arestas.</p>
-<h3 id="33-implementacao-de-referencia">3.3 Implementação de referência<a class="headerlink" href="#33-implementacao-de-referencia" title="Permanent link">&para;</a></h3>
-<p>Para verificar consistência, os mesmos parâmetros foram aplicados ao método nativo do NetworkX (<code>networkx.pagerank</code>). Os resultados dos dois métodos foram comparados quantitativamente.</p>
-<hr />
-<h2 id="4-resultados-obtidos">4. Resultados obtidos<a class="headerlink" href="#4-resultados-obtidos" title="Permanent link">&para;</a></h2>
-<h3 id="41-convergencia">4.1 Convergência<a class="headerlink" href="#41-convergencia" title="Permanent link">&para;</a></h3>
-<p>A implementação manual convergiu de forma estável:</p>
-<ul>
-<li>iterações necessárias: <strong>53</strong>  </li>
-<li>erro final: <strong>9.78 × 10⁻⁷</strong>  </li>
-<li>tempo de execução (ambiente local): <strong>≈ 10.5 s</strong></li>
-</ul>
-<p>Esses valores são esperados para grafos desse porte usando iteração de potência com tolerância fina.</p>
-<hr />
-<h3 id="42-nos-com-maior-pagerank">4.2 Nós com maior PageRank<a class="headerlink" href="#42-nos-com-maior-pagerank" title="Permanent link">&para;</a></h3>
-<p>Os dez nós com maior importância na rede, segundo a implementação manual, são:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: right;">Rank</th>
-<th style="text-align: right;">Nó</th>
-<th style="text-align: right;">PageRank</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">18</td>
-<td style="text-align: right;">0.0045350</td>
-</tr>
-<tr>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">737</td>
-<td style="text-align: right;">0.0031504</td>
-</tr>
-<tr>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">118</td>
-<td style="text-align: right;">0.0021220</td>
-</tr>
-<tr>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">1719</td>
-<td style="text-align: right;">0.0020781</td>
-</tr>
-<tr>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">136</td>
-<td style="text-align: right;">0.0019870</td>
-</tr>
-<tr>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">790</td>
-<td style="text-align: right;">0.0019689</td>
-</tr>
-<tr>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">143</td>
-<td style="text-align: right;">0.0019568</td>
-</tr>
-<tr>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">40</td>
-<td style="text-align: right;">0.0018248</td>
-</tr>
-<tr>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">1619</td>
-<td style="text-align: right;">0.0015362</td>
-</tr>
-<tr>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">725</td>
-<td style="text-align: right;">0.0014960</td>
-</tr>
-</tbody>
-</table>
-<p>A execução com NetworkX teve como resultado a mesma lista de nós e a mesma ordenação, com pequenas diferenças numéricas na sexta casa decimal.</p>
-<hr />
-<h3 id="43-comparacao-entre-as-duas-implementacoes">4.3 Comparação entre as duas implementações<a class="headerlink" href="#43-comparacao-entre-as-duas-implementacoes" title="Permanent link">&para;</a></h3>
-<p>Para avaliar similaridade quantitativa, foram calculadas as correlações entre os vetores completos de PageRank:</p>
-<ul>
-<li><strong>Pearson:</strong> 0.9999978919  </li>
-<li><strong>Spearman:</strong> 0.9999997531  </li>
-</ul>
-<p>Os dois indicadores apontam equivalência entre os métodos: a estrutura de ordenação e a escala dos valores foram preservadas.</p>
-<p>O gráfico de dispersão gerado mostra os pontos concentrados ao longo da diagonal, indicando alinhamento direto entre as duas soluções.</p>
-<p><img alt="Gráfico de comparação do PageRank" src="../pagerank_comparison.png" /></p>
-<hr />
-<h2 id="5-interpretacao-dos-resultados">5. Interpretação dos resultados<a class="headerlink" href="#5-interpretacao-dos-resultados" title="Permanent link">&para;</a></h2>
-<p>Os usuários no topo do ranking possuem valores de PageRank bem maiores que a média da rede. Isso sugere:</p>
-<ul>
-<li>A presença de usuários que costumam receber confiança de múltiplas regiões do grafo.  </li>
-<li>forte acumulação de importância de alguns nós centrais.</li>
-<li>reforço através de conexões de alta qualidade (nós bem classificados apontando para outros nós centrais).</li>
-</ul>
-<p>O PageRank costuma capturar este comportamento de uma forma mais informativa que o grau de entrada simples, pois considera a relevância dos emissores das arestas. Assim, há a possibilidade de  um nó com menor quantidade de entradas poder superar outro mais conectado se receber ligações de usuários igualmente relevantes.</p>
-<p>Essa característica costuma ser adequada para redes de confiança, em que o valor das conexões costuma ser tão importante quanto a quantidade.</p>
-<hr />
-<h2 id="6-conclusao">6. Conclusão<a class="headerlink" href="#6-conclusao" title="Permanent link">&para;</a></h2>
-<p>A aplicação do PageRank ao grafo soc-Epinions1 nos mostrou que a estrutura da rede apresenta forte concentração de importância em poucos usuários, compatível com os padrões típicos de redes sociais dirigidas.</p>
-<p>A implementação manual reproduziu corretamente os comportamentos esperados do algoritmo, confirmado pela comparação com o NetworkX. A convergência ocorreu sem nenhuma instabilidade e os resultados dos dois métodos apresentaram praticamente a mesma coisa no quesito ordenação de nós.</p>
-<p>A análise final indica que o PageRank é um método apropriado para identificar usuários centrais em redes de confiança, oferecendo uma medida de relevância estrutural que vai além do número de conexões recebidas e reflete a propagação global de reputação ao longo do grafo.</p>
+<p>Utilizei a estratificação para garantir a preservação da proporção entre as pessoas que sobreviveram e as que não sobreviveram.</p>
+<p>## 5. Treinamento do Modelo</p>
+<p>O modelo que usei foi:</p>
+<p>```python
+DecisionTreeClassifier(
+criterion="gini",
+max_depth=4,
+random_state=42
+)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>## 6. Estrutura da Árvore de Decisão
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>A imagem abaixo é nossa árvore de decissão já treinada:
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>![Árvore de Decisão](tree.png)
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>O primeiro split utiliza Sex_male &lt;= 0.5, separando todas as mulheres  e todos os homens . Representando o padrão histórico, mulheres tiveram maior taxa de sobrevivência no Titanic.
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>A partir disso, a árvore aplica divisões adicionais usando variáveis como Pclass, Age, Fare e Embarked, buscando sempre formar grupos o mais homogêneos possível.
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>## 7. Avaliação do Modelo
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a> ```
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>               precision    recall  f1-score   support
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>           0       0.77      0.94      0.84       110
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>           1       0.84      0.55      0.67        69
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    accuracy                           0.79       179
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>   macro avg       0.81      0.74      0.76       179
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>weighted avg       0.80      0.79      0.78       179
+</span></code></pre></div>
+Classe 0 - Não Sobreviveu</p>
+<p>Recall de 94% nos indica que o modelo consegue identificar quase todas as pessoas que morreram. Já a precisão apresentou valor de 77% , resultando em uma porcentagem pequena de erro com os não sobreviventes.</p>
+<p>Classe 1 - Sobreviveu</p>
+<p>Recall de 55% nos indicando que o modelo acerta aproximadamente metade das vezes os sobreviventes com uma precisão de 84%.</p>
+<p>Em conclusão o modelo consegue detectar óbitos com excelencia, porém o mesmo tem bastante dificuldade em identificar sobreviventes.</p>
+<h2 id="8-conclusao">8. Conclusão<a class="headerlink" href="#8-conclusao" title="Permanent link">&para;</a></h2>
+<p>O modelo de Árvore de decisão foi capaz de identificar os principais padrões do dataset do Titanic como as mulheres terem maior probabilidade de sobrevivencia e Classe social ter um forte impacto nos resultados.
+No geral o modelo apresentou um bom desempenho em prever não sobreviventes, desempenho moderado em prever os sobreviventes com uma acurácia geral de ~ 80%. Alguns ajustes válidos para futuros trabalhos é a mudança de hiperparametros, após uma análise a árvore estava com parametros muito conservadores.</p>
 
 
 

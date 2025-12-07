@@ -10,26 +10,24 @@
         <meta name="author" content="Guilherme Reis">
       
       
-        <link rel="canonical" href="https://guikingoak.github.io/MachineLearning/roteiro_6/main/">
-      
-      
-        <link rel="prev" href="../../roteiro_2/main/">
+        <link rel="canonical" href="https://guikingoak.github.io/MachineLearning/projeto2/">
       
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
-        <title>6. Page Rank - Entregas de Machine Learning</title>
+        <title>Entregas Individuais - Ciência de Dados - Guilherme Reis - Entregas de Machine Learning</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -113,7 +111,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -139,7 +137,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#analise-do-algoritmo-pagerank-na-rede-soc-epinions1" class="md-skip">
+        <a href="#entregas-individuais-ciencia-de-dados-guilherme-reis" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -155,7 +153,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="../.." title="Entregas de Machine Learning" class="md-header__button md-logo" aria-label="Entregas de Machine Learning" data-md-component="logo">
+    <a href=".." title="Entregas de Machine Learning" class="md-header__button md-logo" aria-label="Entregas de Machine Learning" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -175,7 +173,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              6. Page Rank
+              Entregas Individuais - Ciência de Dados - Guilherme Reis
             
           </span>
         </div>
@@ -291,7 +289,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Entregas de Machine Learning" class="md-nav__button md-logo" aria-label="Entregas de Machine Learning" data-md-component="logo">
+    <a href=".." title="Entregas de Machine Learning" class="md-nav__button md-logo" aria-label="Entregas de Machine Learning" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -321,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -340,20 +338,20 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -369,7 +367,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Exercícios
@@ -383,7 +381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../roteiro_1/main.md" class="md-nav__link">
+      <a href="../roteiro_1/main.md" class="md-nav__link">
         
   
   
@@ -406,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../roteiro_2/main/" class="md-nav__link">
+      <a href="../roteiro_2/main/" class="md-nav__link">
         
   
   
@@ -429,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../roteiro_3/main.md" class="md-nav__link">
+      <a href="../roteiro_3/main.md" class="md-nav__link">
         
   
   
@@ -452,7 +450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../roteiro_4/main.md" class="md-nav__link">
+      <a href="../roteiro_4/main.md" class="md-nav__link">
         
   
   
@@ -475,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../roteiro_5/main.md" class="md-nav__link">
+      <a href="../roteiro_5/main.md" class="md-nav__link">
         
   
   
@@ -495,32 +493,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    6. Page Rank
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../roteiro_6/main/" class="md-nav__link">
         
   
   
@@ -531,146 +507,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-descricao-geral" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Descrição geral
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-estrutura-dos-dados-e-construcao-do-grafo" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Estrutura dos dados e construção do grafo
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-implementacao-do-pagerank" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Implementação do PageRank
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Implementação do PageRank">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-formulacao-adotada" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1 Formulação adotada
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-estrategias-utilizadas" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2 Estratégias utilizadas
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-implementacao-de-referencia" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3 Implementação de referência
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-resultados-obtidos" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Resultados obtidos
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Resultados obtidos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-convergencia" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.1 Convergência
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-nos-com-maior-pagerank" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.2 Nós com maior PageRank
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-comparacao-entre-as-duas-implementacoes" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.3 Comparação entre as duas implementações
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-interpretacao-dos-resultados" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Interpretação dos resultados
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-conclusao" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Conclusão
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -683,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../roteiro_7/main.md" class="md-nav__link">
+      <a href="../roteiro_7/main.md" class="md-nav__link">
         
   
   
@@ -733,120 +569,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-descricao-geral" class="md-nav__link">
+  <a href="#home" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Descrição geral
+      Home
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-estrutura-dos-dados-e-construcao-do-grafo" class="md-nav__link">
+  <a href="#entregas-realizadas" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Estrutura dos dados e construção do grafo
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-implementacao-do-pagerank" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Implementação do PageRank
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Implementação do PageRank">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-formulacao-adotada" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1 Formulação adotada
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-estrategias-utilizadas" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2 Estratégias utilizadas
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-implementacao-de-referencia" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3 Implementação de referência
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-resultados-obtidos" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Resultados obtidos
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Resultados obtidos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-convergencia" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.1 Convergência
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-nos-com-maior-pagerank" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.2 Nós com maior PageRank
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-comparacao-entre-as-duas-implementacoes" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.3 Comparação entre as duas implementações
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-interpretacao-dos-resultados" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Interpretação dos resultados
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-conclusao" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Conclusão
+      Entregas Realizadas
     </span>
   </a>
   
@@ -871,148 +605,19 @@
   
 
 
-<h1 id="analise-do-algoritmo-pagerank-na-rede-soc-epinions1">Análise do Algoritmo PageRank na Rede soc-Epinions1<a class="headerlink" href="#analise-do-algoritmo-pagerank-na-rede-soc-epinions1" title="Permanent link">&para;</a></h1>
-<h2 id="1-descricao-geral">1. Descrição geral<a class="headerlink" href="#1-descricao-geral" title="Permanent link">&para;</a></h2>
-<p>O PageRank é um método de avaliação de importância em grafos dirigidos baseado na distribuição de probabilidade de uma caminhada aleatória. Cada nó recebe um valor proporcional à probabilidade de um agente estar posicionado na mesma posição após um grande número de passos. Esse valor reflete não apenas quantas conexões o nó recebe, mas também a relevância dos nós que apontam para ele.</p>
-<p>Em nosso estudo, o algoritmo foi aplicado à rede <strong>soc-Epinions1</strong>, composta por relações de confiança entre usuários em uma plataforma de avaliações. O PageRank se ajusta naturalmente a esse tipo de estrutura, capturando padrões globais de reputação.</p>
-<hr />
-<h2 id="2-estrutura-dos-dados-e-construcao-do-grafo">2. Estrutura dos dados e construção do grafo<a class="headerlink" href="#2-estrutura-dos-dados-e-construcao-do-grafo" title="Permanent link">&para;</a></h2>
-<p>O dataset contém pares de valores inteiros representando relações de confiança do tipo:</p>
-<p>[
-u \rightarrow v
-]</p>
-<p>em que <strong>u confia em v</strong>. Após a leitura do arquivo:</p>
-<ul>
-<li>nós identificados: <strong>75.879</strong>  </li>
-<li>arestas dirigidas: <strong>508.837</strong></li>
+<h1 id="entregas-individuais-ciencia-de-dados-guilherme-reis">Entregas Individuais - Ciência de Dados - Guilherme Reis<a class="headerlink" href="#entregas-individuais-ciencia-de-dados-guilherme-reis" title="Permanent link">&para;</a></h1>
+<h2 id="home">Home<a class="headerlink" href="#home" title="Permanent link">&para;</a></h2>
+<p>Esta página documenta as entregas de exercícios da disciplina de <strong>Machine Learning</strong>.  </p>
+<h2 id="entregas-realizadas">Entregas Realizadas<a class="headerlink" href="#entregas-realizadas" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Árvore de Decisão</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> KNN</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> K-Means</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Métricas de Avaliação</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Random Forest</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Page Rank</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Support Vector Machine</li>
 </ul>
-<p>A modelagem considerou apenas a sua estrutura original, sem transformações ou novas filtragens. O grafo foi construído como <strong>dirigido</strong>, preservando a direção e permitindo a avaliação de caminhos assimétricos de reputação.</p>
-<p>As características estruturais indicam uma rede grande e esparsa, com distribuição desigual de graus e presença de usuários com papel de hubs de confiança. Esses padrões influenciam diretamente o comportamento do PageRank.</p>
-<hr />
-<h2 id="3-implementacao-do-pagerank">3. Implementação do PageRank<a class="headerlink" href="#3-implementacao-do-pagerank" title="Permanent link">&para;</a></h2>
-<h3 id="31-formulacao-adotada">3.1 Formulação adotada<a class="headerlink" href="#31-formulacao-adotada" title="Permanent link">&para;</a></h3>
-<p>A implementação segue a forma iterativa padrão:</p>
-<p>[
-PR(i) = \frac{1-d}{N} + d \sum_{j \in \text{In}(i)} \frac{PR(j)}{\text{outdeg}(j)},
-]</p>
-<p>com:</p>
-<ul>
-<li><strong>N</strong>: número total de nós,  </li>
-<li><strong>d = 0.85</strong>: fator de amortecimento,  </li>
-<li><strong>In(i)</strong>: conjunto de nós que apontam para i,  </li>
-<li><strong>outdeg(j)</strong>: grau de saída do nó j.</li>
-</ul>
-<h3 id="32-estrategias-utilizadas">3.2 Estratégias utilizadas<a class="headerlink" href="#32-estrategias-utilizadas" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Inicialização uniforme do vetor de PageRank.  </li>
-<li>Computação iterativa usando listas de adjacência, evitando a construção de matriz completa.  </li>
-<li>Redistribuição do PageRank acumulado em nós sem arestas de saída (dangling nodes).  </li>
-<li>Controle de convergência pela diferença entre vetores consecutivos.  </li>
-<li>Critério de parada: erro inferior a (10^{-6}) ou limite de 200 iterações.</li>
-</ul>
-<p>Essa abordagem é adequada para grafos grandes, reduz o consumo de memória e mantém o custo proporcional ao uso de nós e arestas.</p>
-<h3 id="33-implementacao-de-referencia">3.3 Implementação de referência<a class="headerlink" href="#33-implementacao-de-referencia" title="Permanent link">&para;</a></h3>
-<p>Para verificar consistência, os mesmos parâmetros foram aplicados ao método nativo do NetworkX (<code>networkx.pagerank</code>). Os resultados dos dois métodos foram comparados quantitativamente.</p>
-<hr />
-<h2 id="4-resultados-obtidos">4. Resultados obtidos<a class="headerlink" href="#4-resultados-obtidos" title="Permanent link">&para;</a></h2>
-<h3 id="41-convergencia">4.1 Convergência<a class="headerlink" href="#41-convergencia" title="Permanent link">&para;</a></h3>
-<p>A implementação manual convergiu de forma estável:</p>
-<ul>
-<li>iterações necessárias: <strong>53</strong>  </li>
-<li>erro final: <strong>9.78 × 10⁻⁷</strong>  </li>
-<li>tempo de execução (ambiente local): <strong>≈ 10.5 s</strong></li>
-</ul>
-<p>Esses valores são esperados para grafos desse porte usando iteração de potência com tolerância fina.</p>
-<hr />
-<h3 id="42-nos-com-maior-pagerank">4.2 Nós com maior PageRank<a class="headerlink" href="#42-nos-com-maior-pagerank" title="Permanent link">&para;</a></h3>
-<p>Os dez nós com maior importância na rede, segundo a implementação manual, são:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: right;">Rank</th>
-<th style="text-align: right;">Nó</th>
-<th style="text-align: right;">PageRank</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">18</td>
-<td style="text-align: right;">0.0045350</td>
-</tr>
-<tr>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">737</td>
-<td style="text-align: right;">0.0031504</td>
-</tr>
-<tr>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">118</td>
-<td style="text-align: right;">0.0021220</td>
-</tr>
-<tr>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">1719</td>
-<td style="text-align: right;">0.0020781</td>
-</tr>
-<tr>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">136</td>
-<td style="text-align: right;">0.0019870</td>
-</tr>
-<tr>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">790</td>
-<td style="text-align: right;">0.0019689</td>
-</tr>
-<tr>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">143</td>
-<td style="text-align: right;">0.0019568</td>
-</tr>
-<tr>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">40</td>
-<td style="text-align: right;">0.0018248</td>
-</tr>
-<tr>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">1619</td>
-<td style="text-align: right;">0.0015362</td>
-</tr>
-<tr>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">725</td>
-<td style="text-align: right;">0.0014960</td>
-</tr>
-</tbody>
-</table>
-<p>A execução com NetworkX teve como resultado a mesma lista de nós e a mesma ordenação, com pequenas diferenças numéricas na sexta casa decimal.</p>
-<hr />
-<h3 id="43-comparacao-entre-as-duas-implementacoes">4.3 Comparação entre as duas implementações<a class="headerlink" href="#43-comparacao-entre-as-duas-implementacoes" title="Permanent link">&para;</a></h3>
-<p>Para avaliar similaridade quantitativa, foram calculadas as correlações entre os vetores completos de PageRank:</p>
-<ul>
-<li><strong>Pearson:</strong> 0.9999978919  </li>
-<li><strong>Spearman:</strong> 0.9999997531  </li>
-</ul>
-<p>Os dois indicadores apontam equivalência entre os métodos: a estrutura de ordenação e a escala dos valores foram preservadas.</p>
-<p>O gráfico de dispersão gerado mostra os pontos concentrados ao longo da diagonal, indicando alinhamento direto entre as duas soluções.</p>
-<p><img alt="Gráfico de comparação do PageRank" src="../pagerank_comparison.png" /></p>
-<hr />
-<h2 id="5-interpretacao-dos-resultados">5. Interpretação dos resultados<a class="headerlink" href="#5-interpretacao-dos-resultados" title="Permanent link">&para;</a></h2>
-<p>Os usuários no topo do ranking possuem valores de PageRank bem maiores que a média da rede. Isso sugere:</p>
-<ul>
-<li>A presença de usuários que costumam receber confiança de múltiplas regiões do grafo.  </li>
-<li>forte acumulação de importância de alguns nós centrais.</li>
-<li>reforço através de conexões de alta qualidade (nós bem classificados apontando para outros nós centrais).</li>
-</ul>
-<p>O PageRank costuma capturar este comportamento de uma forma mais informativa que o grau de entrada simples, pois considera a relevância dos emissores das arestas. Assim, há a possibilidade de  um nó com menor quantidade de entradas poder superar outro mais conectado se receber ligações de usuários igualmente relevantes.</p>
-<p>Essa característica costuma ser adequada para redes de confiança, em que o valor das conexões costuma ser tão importante quanto a quantidade.</p>
-<hr />
-<h2 id="6-conclusao">6. Conclusão<a class="headerlink" href="#6-conclusao" title="Permanent link">&para;</a></h2>
-<p>A aplicação do PageRank ao grafo soc-Epinions1 nos mostrou que a estrutura da rede apresenta forte concentração de importância em poucos usuários, compatível com os padrões típicos de redes sociais dirigidas.</p>
-<p>A implementação manual reproduziu corretamente os comportamentos esperados do algoritmo, confirmado pela comparação com o NetworkX. A convergência ocorreu sem nenhuma instabilidade e os resultados dos dois métodos apresentaram praticamente a mesma coisa no quesito ordenação de nós.</p>
-<p>A análise final indica que o PageRank é um método apropriado para identificar usuários centrais em redes de confiança, oferecendo uma medida de relevância estrutural que vai além do número de conexões recebidas e reflete a propagação global de reputação ao longo do grafo.</p>
 
 
 
@@ -1069,10 +674,10 @@ PR(i) = \frac{1-d}{N} + d \sum_{j \in \text{In}(i)} \frac{PR(j)}{\text{outdeg}(j
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.top", "navigation.path", "navigation.tracking", "navigation.expand"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.select", "content.code.annotate", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.top", "navigation.path", "navigation.tracking", "navigation.expand"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
