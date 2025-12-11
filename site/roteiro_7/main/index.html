@@ -592,6 +592,29 @@
 
 
 <h1 id="entrega-individual-svm">Entrega Individual - SVM<a class="headerlink" href="#entrega-individual-svm" title="Permanent link">&para;</a></h1>
+<ol>
+<li>Objetivo</li>
+</ol>
+<p>O objetivo deste trabalho foi realizar a aplicação do algoritmo de SVM ao dataset Titanic que usamos em sala de aula para prever se um passageiro sobreviveu ou não ao naufrágio.</p>
+<ol>
+<li>Tratamento</li>
+</ol>
+<p>Foram identificados valores ausentes nas colunas Age e Embarked. Para solucionar este problema realizamos a mediana para preencher as idades faltantes e, o porto de embarque foi preenchido utilizando a moda da coluna. As variáveis categóricas utilizadas Sex e Embarked passaram por one-hot encoding se tornando variáveis numéricas já que o SVM não opera com texto diretamente.</p>
+<p>Em seguida dividimos o conjunto em 70% para treino e 30% para teste. Pelo SVM ser sensível a escala das features, realizei o StandardScaler.</p>
+<ol>
+<li>Treinamento com SVM</li>
+</ol>
+<p>Foi testado 4 Kernels: linear, rbf, poly e sigmoid. Cada um passou pelo treinamento com o mesmo conjunto de treino padronizado. A avaliação foi feita usando a acurácia nos conjuntos de teste. Os resultados a seguir mostraram diferenças bem discrepantes entre os kernels.</p>
+<ol>
+<li>Resultados</li>
+</ol>
+<p>O kernel RBF apresentou o melhor desempenho em geral, o mesmo conseguiu capturar padrões complexos nas relações das variáveis como idade, sexo e a classe socioeconomica.</p>
+<p>O Kernel Linear teve um resultado consistente, somente indicando que parte da separação dos sobreviventes e mortos foram praticamente próximos ao linear.</p>
+<p>Os kernels de Poly e Sigmoid tiveram desempenho baixo devido a alta sensibilidade à escala , ruido e dimensionalidade causada pelo one-hot encoding.</p>
+<p>A matriz de confusão do RBF mostrou que o SVM identificou os passageiros mortos com alta precisão refletido no valor de precisão e recall, porém teve uma pequena queda ao identificar sobreviventes ocorrendo bastantes ocorrencias de falsos negativos. O f1-score das duas classes nos mostrou esse desbalanceamento natural.</p>
+<p><img alt="Acurácia SVM" src="../svm_kernel_accuracy.png" /></p>
+<div class="language-text highlight"><pre><span></span><code>![Matriz de Confusão](svm_confusion_matrix.png)
+</code></pre></div>
 
 
 
