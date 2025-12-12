@@ -10,13 +10,13 @@
         <meta name="author" content="Guilherme Reis">
       
       
-        <link rel="canonical" href="https://guikingoak.github.io/MachineLearning/roteiro_2/main/">
+        <link rel="canonical" href="https://guikingoak.github.io/MachineLearning/roteiro_5/main/">
       
       
-        <link rel="prev" href="../../roteiro_1/main/">
+        <link rel="prev" href="../../roteiro_4/main/">
       
       
-        <link rel="next" href="../../roteiro_3/main/">
+        <link rel="next" href="../../roteiro_6/main/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>2. KNN - Entregas de Machine Learning</title>
+        <title>5. Random Forest - Entregas de Machine Learning</title>
       
     
     
@@ -143,7 +143,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#relatorio-knn" class="md-skip">
+        <a href="#relatorio-random-forest" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -179,7 +179,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2. KNN
+              5. Random Forest
             
           </span>
         </div>
@@ -426,37 +426,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2. KNN
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../roteiro_2/main/" class="md-nav__link">
         
   
   
@@ -472,103 +445,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introducao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Introdução
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-exploracao-dos-dados" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Exploração dos Dados
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-pre-processamento" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Pré-processamento
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-divisao-dos-dados" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Divisão dos Dados
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-treinamento-do-modelo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Treinamento do Modelo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-avaliacao-do-modelo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Avaliação do Modelo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-conclusao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Conclusão
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -634,10 +510,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../roteiro_5/main/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Random Forest
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -653,6 +556,92 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introdução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-base-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Base de Dados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-exploracao-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Exploração de Dados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-pre-processamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Pré-processamento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-treinamento-do-modelo-e-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Treinamento do Modelo e Resultados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusão Final
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -804,10 +793,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introducao" class="md-nav__link">
+  <a href="#1-introducao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Introdução
+        1. Introdução
       
     </span>
   </a>
@@ -815,10 +804,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-exploracao-dos-dados" class="md-nav__link">
+  <a href="#2-base-de-dados" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Exploração dos Dados
+        2. Base de Dados
       
     </span>
   </a>
@@ -826,10 +815,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-pre-processamento" class="md-nav__link">
+  <a href="#3-exploracao-de-dados" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Pré-processamento
+        3. Exploração de Dados
       
     </span>
   </a>
@@ -837,10 +826,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-divisao-dos-dados" class="md-nav__link">
+  <a href="#4-pre-processamento" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Divisão dos Dados
+        4. Pré-processamento
       
     </span>
   </a>
@@ -848,10 +837,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-treinamento-do-modelo" class="md-nav__link">
+  <a href="#5-treinamento-do-modelo-e-resultados" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Treinamento do Modelo
+        5. Treinamento do Modelo e Resultados
       
     </span>
   </a>
@@ -859,21 +848,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-avaliacao-do-modelo" class="md-nav__link">
+  <a href="#conclusao-final" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Avaliação do Modelo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-conclusao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Conclusão
+        Conclusão Final
       
     </span>
   </a>
@@ -948,25 +926,66 @@
   
 
 
-<h1 id="relatorio-knn">Relatório – KNN<a class="headerlink" href="#relatorio-knn" title="Permanent link">&para;</a></h1>
-<h2 id="introducao">Introdução<a class="headerlink" href="#introducao" title="Permanent link">&para;</a></h2>
-<p>Este projeto tem como objetivo aplicar o algoritmo K-Nearest Neighbors (KNN) para resolver um problema de classificação com o dataset Titanic. O Projeto consiste em prever se um passageiro sobreviveu ao naufrágio com base em atributos demográficos e socioeconômicos.</p>
-<h2 id="1-exploracao-dos-dados">1. Exploração dos Dados<a class="headerlink" href="#1-exploracao-dos-dados" title="Permanent link">&para;</a></h2>
-<p>O dataset Titanic contém features que utilizaremos como o Pclass, Sex, Age, SibSp, Parch, Fare e Embarked. A variável alvo é Survived sendo 0 = não sobreviveu e 1 = sobreviveu. A análise exploratória identificou padrões importantes, como maior sobrevivência entre mulheres e passageiros da 1ª classe. Estatísticas descritivas e visualizações realizadas ao subir carregar o dataset ajudaram a compreender melhor a distribuição dos atributos e a relação deles com a variável alvo.</p>
-<h2 id="2-pre-processamento">2. Pré-processamento<a class="headerlink" href="#2-pre-processamento" title="Permanent link">&para;</a></h2>
-<p>O pré-processamento envolveu:
-- Tratamento de valores ausentes onde para a variável Age utilizamos a mediana e para a variável Embarked utilizamos a moda.
-- Conversão de Sex para valores numéricos.
-- One-Hot Encoding aplicado em Embarked.
-- Normalização com StandardScaler devido ao uso de distâncias.</p>
-<h2 id="3-divisao-dos-dados">3. Divisão dos Dados<a class="headerlink" href="#3-divisao-dos-dados" title="Permanent link">&para;</a></h2>
-<p>O dataset foi dividido em 80% para treino e 20% para teste. A estratégia stratify=y foi utilizada para manter a proporção de classes entre as amostras.</p>
-<h2 id="4-treinamento-do-modelo">4. Treinamento do Modelo<a class="headerlink" href="#4-treinamento-do-modelo" title="Permanent link">&para;</a></h2>
-<p>O modelo KNN foi treinado inicialmente com k = 5. Valores adicionais entre 1 e 20 de k foram testados para observar variações no desempenho.</p>
-<h2 id="5-avaliacao-do-modelo">5. Avaliação do Modelo<a class="headerlink" href="#5-avaliacao-do-modelo" title="Permanent link">&para;</a></h2>
-<p>Foram utilizadas acurácia, matriz de confusão, precision, recall e F1-score. O modelo apresentou desempenho consistente, com acurácia média próxima de 80%. Valores muito baixos de k resultaram em maior sensibilidade a ruídos, enquanto valores muito altos prejudicaram a identificação de padrões locais.</p>
-<h2 id="6-conclusao">6. Conclusão<a class="headerlink" href="#6-conclusao" title="Permanent link">&para;</a></h2>
-<p>O projeto foi bem simples e demonstrou que o KNN é capaz de realizar previsões razoáveis no dataset Titanic, desde que o pré-processamento seja bem executado. A normalização desempenhou um papel crucial durante este projeto. Como melhorias, destacam-se o uso de técnicas de balanceamento e testes com modelos mais avançados.</p>
+<h1 id="relatorio-random-forest">Relatório - Random Forest<a class="headerlink" href="#relatorio-random-forest" title="Permanent link">&para;</a></h1>
+<h2 id="1-introducao">1. Introdução<a class="headerlink" href="#1-introducao" title="Permanent link">&para;</a></h2>
+<p>O objetivo deste projeto é aplicar o algoritmo de Random Forest no dataset Fraudes para tentar identificar transações fraudulentas. Neste projeto, nossa variável alvo é Classe (Normal ou Fraude). O modelo deve tentar identificar transações legítimas e fraudulentas com base nas informações financeiras e temporais que possuimos. Realizamos para testes a divisão estratificada treino e teste na proporção 70/30. Durante a avaliação realizeramos a análise das métricas acurácia, matriz de confusão, ROC AUC e classification report.</p>
+<h2 id="2-base-de-dados">2. Base de Dados<a class="headerlink" href="#2-base-de-dados" title="Permanent link">&para;</a></h2>
+<p>O arquivo utilizado fraude.csv contém 3 colunas que serão vistas:</p>
+<p>Valor - Valor da transação numérico
+Periodo - período do dia
+Classe - Variável alvo, Normal ou Fraude.</p>
+<p>Dentro do dataset possuimos apenas 38 amostras, fazendo com que o dataset seja pequeno e desbalanceado.</p>
+<h2 id="3-exploracao-de-dados">3. Exploração de Dados<a class="headerlink" href="#3-exploracao-de-dados" title="Permanent link">&para;</a></h2>
+<p>Este dataset é muito pequeno possuindo apenas 38 registros e um forte desbalanceamento já que 84% dos dados da variavél alvo são "Normal" enquanto os outros 16% são "Fraude". A variável Valor é contínua com informações diretas enquanto Período é categórica com sinal temporal simples.
+Dada a limitação de features de nosso dataset, as previsões que serão vistas tendem a ser padrões muito básicos, deixando as métricas instáveis.</p>
+<h2 id="4-pre-processamento">4. Pré-processamento<a class="headerlink" href="#4-pre-processamento" title="Permanent link">&para;</a></h2>
+<p>As etapas realizadas durante o pré-processamento do dataset foram a conversão e limpeza da variável valor, codificação da variável Periodo utilizando LabelEncoder para transformar as categorias Diurno e Noturno em 0/1, foi criado também a variável alvo em forma binária 0 = normal e 1 = fraude. Os dados foram divididos em Treino e teste com os parâmetros train_test_split(test_size=0.3, random_state=27, stratify=target) e na proporção de 70% para treino e 30% teste com estratificação.</p>
+<h2 id="5-treinamento-do-modelo-e-resultados">5. Treinamento do Modelo e Resultados<a class="headerlink" href="#5-treinamento-do-modelo-e-resultados" title="Permanent link">&para;</a></h2>
+<p>O modelo usado foi RandomForestClassifier(n_estimators=200, random_state=27), os features que utilizamos foram Valor e Periodo_enc.</p>
+<p>A seguir seguem as métricas resultantes do modelo:</p>
+<p>Acurácia (teste): 0.8333</p>
+<p>ROC AUC:
+<img alt="Curva ROC" src="../output2.png" /></p>
+<p><img alt="Curva Precision-Recall" src="../output3.png" /></p>
+<div class="language-text highlight"><pre><span></span><code>           precision    recall  f1-score   support
+
+  Fraude       0.67      1.00      0.80         2
+  Normal       1.00      0.88      0.93         8
+
+accuracy                           0.90        10
+</code></pre></div>
+<p>macro avg       0.83      0.94      0.87        10
+weighted avg       0.93      0.90      0.91        10</p>
+<p>No caso das fraudes, o Recall conseguiu identificar todas as fraudes presentes no teste, porém o precision algumas previsões de fraude ocorreram em casos que eram normais. Já durante o Normal ele identificou todos os normais e errou apenas 1 caso.</p>
+<p>Matriz de Confusão:</p>
+<p><img alt="Matriz de Confusão" src="../output.png" /></p>
+<p>Normal previstos corretamentes: 10
+ Fraudes previstas como normais: 2
+ Nenhuma fraude foi prevista corretamente.</p>
+<p>## Importância das features</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Importância</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Valor</td>
+<td>0.8509</td>
+</tr>
+<tr>
+<td>Periodo_enc</td>
+<td>0.1491</td>
+</tr>
+</tbody>
+</table>
+<p>Dentro de nossa análise, a variável valor foi de longe a mais informativa para o modelo, em um dataset tão pequeno valores atípicos costumam a explicar fraudes.</p>
+<p>Já a Curva ROC foi de 0.75, mostrando que nosso modelo tem alguma separação entre as classes, porém o recall de fraude no teste foi 0 por conta da quantidade absurdamente baixa de amostra de teste.</p>
+<h2 id="conclusao-final">Conclusão Final<a class="headerlink" href="#conclusao-final" title="Permanent link">&para;</a></h2>
+<p>O modelo Random Forest obteve desempenho muito superior ao esperado para uma base pequena e desbalanceada, pois conseguiu detectar 100% das fraudes presentes em todos os testes enquanto manteve uma precisão perfeita com a classe "Normal". Em geral o modelo também manteve uma acurácia geral de 90% e apresentou um F1-macro de 0.86, oque é excelente para classificação binária em casos onde há um grande desequilíbrio entre os dados.</p>
+<p>Esse resultado demonstra que a combinação de Random Forest,balanceamento e ajuste de threshold permitiu que o modelo capturasse padrões relevantes para distinguir transações normais e fraudulentas, sem inflar falsos positivos.</p>
 
 
 
