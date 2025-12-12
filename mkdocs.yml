@@ -83,6 +83,8 @@ nav:
       - 5. Random Forest: roteiro_5/main.md
       - 6. Page Rank: roteiro_6/main.md
       - 7. SVM: roteiro_7/main.md
+      - 8. Projeto I: projeto1/main.md
+      - 9. Projeto II: projeto2/main.md
 
 plugins:
   - search
